@@ -1,0 +1,59 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+body {
+
+}
+a:hover { text-decoration: none }
+
+div#masonry {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100vw;
+	font-size: 0; 
+}
+div#masonry div {
+	width: 33.333333%;
+  transition: opacity .3s;
+}
+div#masonry div img{
+  width: 100%;
+  display: block;
+}
+div#masonry:hover div {
+	opacity: 0.7;
+}
+div#masonry:hover div:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width : 500px) {
+	div#masonry { height: 250vw; }
+  div#masonry div { width: 50%; }
+	div#masonry div img { width: 100%; }
+}
